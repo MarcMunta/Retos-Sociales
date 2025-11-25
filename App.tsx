@@ -15,7 +15,13 @@ const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [lang, setLang] = useState<LangKey>('es');
   
-  const SECTIONS_DATA = getSectionData(lang);
+    const CLOSE_LABEL: Record<LangKey, string> = {
+        es: 'Cerrar panel detallado',
+        en: 'Close detail panel',
+        ca: 'Tancar panell detallat'
+    };
+
+    const SECTIONS_DATA = getSectionData(lang);
   const currentSection = SECTIONS_DATA[activeSection];
   const activeData = currentSection.data[activeIndex];
   const Icon = activeData.icon;
@@ -319,12 +325,15 @@ const App: React.FC = () => {
               exit={{ scale: 0.95, y: 20, opacity: 0 }}
               className={`relative w-full max-w-5xl border rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[90vh] md:h-[85vh] transition-colors duration-500 ${theme.bgCard} ${theme.borderStrong}`}
             >
-              <button 
-                onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black text-white rounded-full transition-colors border border-white/10"
-              >
-                <X size={20} />
-              </button>
+                            <button 
+                                type="button"
+                                onClick={() => setIsModalOpen(false)}
+                                aria-label={CLOSE_LABEL[lang]}
+                                className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black text-white rounded-full transition-colors border border-white/10"
+                            >
+                                <span className="sr-only">{CLOSE_LABEL[lang]}</span>
+                                <X size={20} aria-hidden="true" />
+                            </button>
 
               <div className="w-full md:w-1/3 h-40 md:h-auto relative shrink-0">
                  <div className={`absolute inset-0 z-10 ${isDarkMode ? 'bg-gradient-to-t md:bg-gradient-to-r from-black via-black/40 to-transparent' : 'bg-gradient-to-t md:bg-gradient-to-r from-slate-900 via-slate-900/40 to-transparent'}`} />
