@@ -21,5 +21,6 @@ export interface InfoCardData {
   statPercentage: number;
   longDescription: string;
   keyPoints: string[];
-  analysis: StructuredAnalysis; // New field for specific 5-point analysis
+  studentOpinion: string; // New field for student perspective
+  analysis: StructuredAnalysis;
 }

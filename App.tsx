@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Background from './components/Background';
 import InequalitySimulator from './components/InequalitySimulator';
 import { getSectionData, UI_TEXT } from './constants';
-import { ChevronRight, ArrowRight, LayoutGrid, BookOpen, ExternalLink, X, Info, User, Building2, TrendingUp, ShieldCheck, Zap, Scale, GraduationCap, HandCoins, Sun, Moon, Globe } from 'lucide-react';
+import { ChevronRight, ArrowRight, LayoutGrid, BookOpen, ExternalLink, X, Info, User, Building2, TrendingUp, ShieldCheck, Zap, Scale, GraduationCap, HandCoins, Sun, Moon, Globe, MessageCircle, Quote, ThumbsUp, Share2, BadgeCheck } from 'lucide-react';
 
 type SectionKey = 'social' | 'education' | 'poverty';
 type LangKey = 'es' | 'en' | 'ca';
@@ -12,21 +12,26 @@ const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<SectionKey>('social');
   const [activeIndex, setActiveIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOpinionModalOpen, setIsOpinionModalOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [lang, setLang] = useState<LangKey>('es');
   
-    const CLOSE_LABEL: Record<LangKey, string> = {
-        es: 'Cerrar panel detallado',
-        en: 'Close detail panel',
-        ca: 'Tancar panell detallat'
-    };
-
-    const SECTIONS_DATA = getSectionData(lang);
+  const SECTIONS_DATA = getSectionData(lang);
   const currentSection = SECTIONS_DATA[activeSection];
   const activeData = currentSection.data[activeIndex];
   const Icon = activeData.icon;
   const AccentColor = currentSection.color;
   const ui = UI_TEXT[lang];
+
+  // Helper to get realistic FP degrees based on section
+  const getFPDegree = () => {
+    switch(activeSection) {
+        case 'education': return "CFGS Educación Infantil / ASIX";
+        case 'poverty': return "CFGS Integración Social";
+        case 'social': return "CFGS Administración y Finanzas";
+        default: return "Formación Profesional";
+    }
+  };
 
   // Theme configuration object for cleaner usage in JSX
   const theme = {
@@ -211,6 +216,18 @@ const App: React.FC = () => {
                                         style={{ width: `${activeData.statPercentage}%`, backgroundColor: AccentColor }}
                                     />
                                 </div>
+
+                                {/* STUDENT OPINION BUTTON */}
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setIsOpinionModalOpen(true);
+                                    }}
+                                    className={`mt-4 w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wide transition-all shadow-lg ${isDarkMode ? 'bg-gradient-to-r from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 text-white border border-white/10' : 'bg-gradient-to-r from-slate-200 to-slate-100 hover:from-slate-300 hover:to-slate-200 text-slate-800 border border-slate-300'}`}
+                                >
+                                    <MessageCircle size={14} style={{ color: AccentColor }} />
+                                    <span>{ui.studentView}</span>
+                                </button>
                             </div>
                         </div>
 
@@ -308,6 +325,83 @@ const App: React.FC = () => {
 
       </main>
 
+      {/* STUDENT OPINION MODAL */}
+      <AnimatePresence>
+        {isOpinionModalOpen && (
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-[60] flex items-center justify-center px-4"
+                onClick={() => setIsOpinionModalOpen(false)}
+            >
+                <div className={`absolute inset-0 backdrop-blur-sm ${isDarkMode ? 'bg-black/70' : 'bg-slate-900/20'}`} />
+                <motion.div
+                    initial={{ scale: 0.9, y: 30, opacity: 0 }}
+                    animate={{ scale: 1, y: 0, opacity: 1 }}
+                    exit={{ scale: 0.9, y: 30, opacity: 0 }}
+                    onClick={(e) => e.stopPropagation()}
+                    className={`relative w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden transition-colors duration-500 ${theme.bgCard} ${theme.borderStrong} border`}
+                >
+                    {/* Header simulating a Student Card ID */}
+                    <div className="relative h-24 overflow-hidden">
+                        <div className={`absolute inset-0 opacity-80 ${isDarkMode ? 'bg-gradient-to-r from-slate-900 to-black' : 'bg-gradient-to-r from-slate-100 to-white'}`} />
+                        <div className="absolute inset-0 opacity-20" style={{ backgroundColor: AccentColor, mixBlendMode: 'overlay' }} />
+                        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)', backgroundSize: '16px 16px' }} />
+                        
+                        <button 
+                            onClick={() => setIsOpinionModalOpen(false)}
+                            className={`absolute top-4 right-4 p-2 rounded-full transition-colors z-20 ${isDarkMode ? 'hover:bg-white/10 text-white/70' : 'hover:bg-black/5 text-slate-500'}`}
+                        >
+                            <X size={18} />
+                        </button>
+                    </div>
+
+                    <div className="px-8 pb-8 -mt-12 relative z-10">
+                        <div className="flex justify-between items-end mb-6">
+                            <div className="flex items-end gap-4">
+                                <div className={`w-20 h-20 rounded-2xl flex items-center justify-center shrink-0 border-4 shadow-lg ${isDarkMode ? 'bg-[#1a1a1a] border-[#111]' : 'bg-white border-white'}`}>
+                                    <User size={32} style={{ color: AccentColor }} />
+                                </div>
+                                <div className="mb-1">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <h3 className={`text-xl font-bold leading-tight ${theme.heading}`}>{ui.studentView}</h3>
+                                        <BadgeCheck size={16} className="text-blue-500" />
+                                    </div>
+                                    <span className={`text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${isDarkMode ? 'bg-white/5 border-white/10 text-slate-400' : 'bg-slate-100 border-slate-200 text-slate-600'}`}>
+                                        {getFPDegree()}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="relative mb-6">
+                            <Quote className={`absolute -top-3 -left-3 opacity-20 rotate-180 transform scale-75 ${theme.iconMuted}`} size={40} />
+                            <p className={`text-lg leading-relaxed italic ${theme.text}`}>
+                                "{activeData.studentOpinion}"
+                            </p>
+                            <Quote className={`absolute -bottom-3 -right-3 opacity-20 transform scale-75 ${theme.iconMuted}`} size={40} />
+                        </div>
+
+                        {/* Fake Social Interaction Buttons */}
+                        <div className={`flex items-center gap-4 pt-6 border-t ${theme.border}`}>
+                            <button className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-colors hover:text-pink-500 ${theme.subheading}`}>
+                                <ThumbsUp size={14} /> <span>142 Likes</span>
+                            </button>
+                            <button className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-colors hover:text-blue-500 ${theme.subheading}`}>
+                                <MessageCircle size={14} /> <span>28 Comments</span>
+                            </button>
+                            <div className="flex-1" />
+                            <button className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-colors hover:text-green-500 ${theme.subheading}`}>
+                                <Share2 size={14} /> <span>Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </motion.div>
+            </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* DETAILED MODAL */}
       <AnimatePresence>
         {isModalOpen && (
@@ -325,15 +419,12 @@ const App: React.FC = () => {
               exit={{ scale: 0.95, y: 20, opacity: 0 }}
               className={`relative w-full max-w-5xl border rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[90vh] md:h-[85vh] transition-colors duration-500 ${theme.bgCard} ${theme.borderStrong}`}
             >
-                            <button 
-                                type="button"
-                                onClick={() => setIsModalOpen(false)}
-                                aria-label={CLOSE_LABEL[lang]}
-                                className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black text-white rounded-full transition-colors border border-white/10"
-                            >
-                                <span className="sr-only">{CLOSE_LABEL[lang]}</span>
-                                <X size={20} aria-hidden="true" />
-                            </button>
+              <button 
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black text-white rounded-full transition-colors border border-white/10"
+              >
+                <X size={20} />
+              </button>
 
               <div className="w-full md:w-1/3 h-40 md:h-auto relative shrink-0">
                  <div className={`absolute inset-0 z-10 ${isDarkMode ? 'bg-gradient-to-t md:bg-gradient-to-r from-black via-black/40 to-transparent' : 'bg-gradient-to-t md:bg-gradient-to-r from-slate-900 via-slate-900/40 to-transparent'}`} />

@@ -1,49 +1,20 @@
-# Inequality Infoweb – Retos Sociales
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Aplicación web interactiva sobre desigualdad social, creada con React + Vite. Permite visualizar conceptos clave mediante tarjetas informativas y un simulador sencillo que muestra cómo pequeños cambios en los recursos afectan a distintos grupos sociales.
+# Run and deploy your AI Studio app
 
-Web desplegada:
+This contains everything you need to run your app locally.
 
-- https://marcmunta.github.io/Retos-Sociales/
+View your app in AI Studio: https://ai.studio/apps/drive/1iVKxA1s3iauBMzJ9quGePKmks-PLTvgd
 
-## Cómo arrancar el proyecto
+## Run Locally
 
-```powershell
-npm install
-npm run dev
-```
+**Prerequisites:**  Node.js
 
-Después de ejecutar `npm run dev`, abre en tu navegador:
 
-- `http://localhost:3000/`
-
-## Tecnologías principales
-
-- React 19 (con TypeScript)
-- Vite 6
-- Tailwind CSS (CDN)
-- framer-motion
-- lucide-react
-
-## Build para producción
-
-```powershell
-npm run build
-```
-
-Los archivos generados se guardan en la carpeta `dist/`, lista para desplegar en GitHub Pages.
-
-## Objetivo y contexto del proyecto
-
-Este proyecto forma parte de los *Retos Sociales* y tiene como finalidad abordar, de forma clara y accesible, el tema de la desigualdad social.
-
-En concreto, pretende:
-
-- Introducir el concepto de desigualdad social y sus consecuencias de manera visual y didáctica.
-- Mostrar, mediante ejemplos sencillos, cómo la distribución desigual de recursos afecta a distintos colectivos.
-- Ofrecer una experiencia moderna con efecto glassmorphism y fondo dinámico para hacer el contenido más atractivo.
-- Facilitar la reflexión mediante un simulador interactivo que ilustra cómo pequeños cambios en los recursos pueden generar diferencias importantes.
-
-## Autor
-
-- Repositorio: https://github.com/MarcMunta/Retos-Sociales
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
