@@ -1,49 +1,25 @@
-# Inequality Infoweb – Retos Sociales
+# 🌍 Retos Sociales – Despierta tu Consciencia
 
-Aplicación web interactiva sobre desigualdad social, creada con React + Vite. Permite visualizar conceptos clave mediante tarjetas informativas y un simulador sencillo que muestra cómo pequeños cambios en los recursos afectan a distintos grupos sociales.
+## ¿Qué está pasando en el mundo?
 
-Web desplegada:
+Vivimos en un planeta donde **millones de personas no tienen acceso a educación**, donde la **brecha entre ricos y pobres sigue creciendo**, y donde la **pobreza extrema** afecta a comunidades enteras. Estos no son problemas lejanos; son realidades que nos afectan a todos.
 
-- https://marcmunta.github.io/Retos-Sociales/
+Este proyecto nace de la necesidad de **abrir los ojos** ante las injusticias sociales que nos rodean. Es una invitación a reflexionar, a cuestionar, y sobre todo, a **tomar consciencia** de que cada uno de nosotros puede ser parte del cambio.
 
-## Cómo arrancar el proyecto
+## 🎯 ¿De qué trata este proyecto?
 
-```powershell
-npm install
-npm run dev
-```
+**Retos Sociales** es una aplicación web interactiva que explora tres grandes problemáticas de nuestro tiempo:
 
-Después de ejecutar `npm run dev`, abre en tu navegador:
+- **⚖️ Desigualdad Social** – La distribución desigual de recursos y oportunidades
+- **📚 Acceso a la Educación** – El derecho que millones aún no pueden ejercer
+- **💔 Pobreza y Carencia** – Las condiciones que limitan el desarrollo humano
 
-- `http://localhost:3000/`
+A través de visualizaciones impactantes, datos reales y un simulador interactivo, podrás comprender cómo estos problemas afectan a las personas, las empresas y la economía global.
 
-## Tecnologías principales
+## 🌐 Explora el proyecto
 
-- React 19 (con TypeScript)
-- Vite 6
-- Tailwind CSS (CDN)
-- framer-motion
-- lucide-react
+**👉 [https://marcmunta.github.io/Retos-Sociales/](https://marcmunta.github.io/Retos-Sociales/)**
 
-## Build para producción
+---
 
-```powershell
-npm run build
-```
-
-Los archivos generados se guardan en la carpeta `dist/`, lista para desplegar en GitHub Pages.
-
-## Objetivo y contexto del proyecto
-
-Este proyecto forma parte de los *Retos Sociales* y tiene como finalidad abordar, de forma clara y accesible, el tema de la desigualdad social.
-
-En concreto, pretende:
-
-- Introducir el concepto de desigualdad social y sus consecuencias de manera visual y didáctica.
-- Mostrar, mediante ejemplos sencillos, cómo la distribución desigual de recursos afecta a distintos colectivos.
-- Ofrecer una experiencia moderna con efecto glassmorphism y fondo dinámico para hacer el contenido más atractivo.
-- Facilitar la reflexión mediante un simulador interactivo que ilustra cómo pequeños cambios en los recursos pueden generar diferencias importantes.
-
-## Autor
-
-- Repositorio: https://github.com/MarcMunta/Retos-Sociales
+*"El primer paso para cambiar el mundo es ser consciente de lo que pasa en él."*
