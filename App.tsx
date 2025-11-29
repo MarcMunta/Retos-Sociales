@@ -103,9 +103,11 @@ const App: React.FC = () => {
 
              <button 
                 onClick={() => setIsDarkMode(!isDarkMode)}
+                aria-label={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+                title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
                 className={`p-3 rounded-full border transition-all duration-300 ${isDarkMode ? 'bg-white/5 border-white/10 hover:bg-white/10 text-yellow-500' : 'bg-white border-slate-200 hover:bg-slate-100 text-slate-700 shadow-sm'}`}
              >
-                {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+                {isDarkMode ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
              </button>
           </div>
         </header>
@@ -351,9 +353,11 @@ const App: React.FC = () => {
                         
                         <button 
                             onClick={() => setIsOpinionModalOpen(false)}
+                            aria-label="Cerrar panel de opinión"
+                            title="Cerrar"
                             className={`absolute top-4 right-4 p-2 rounded-full transition-colors z-20 ${isDarkMode ? 'hover:bg-white/10 text-white/70' : 'hover:bg-black/5 text-slate-500'}`}
                         >
-                            <X size={18} />
+                            <X size={18} aria-hidden="true" />
                         </button>
                     </div>
 
@@ -421,9 +425,11 @@ const App: React.FC = () => {
             >
               <button 
                 onClick={() => setIsModalOpen(false)}
+                aria-label="Cerrar panel detallado"
+                title="Cerrar"
                 className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black text-white rounded-full transition-colors border border-white/10"
               >
-                <X size={20} />
+                <X size={20} aria-hidden="true" />
               </button>
 
               <div className="w-full md:w-1/3 h-40 md:h-auto relative shrink-0">
@@ -493,9 +499,11 @@ const App: React.FC = () => {
 const SideButton = ({ isActive, onClick, icon: Icon, color, label, isDarkMode }: any) => (
     <button 
         onClick={onClick}
+        aria-label={label}
+        title={label}
         className={`relative group w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isActive ? (isDarkMode ? 'bg-white/10' : 'bg-slate-100') : (isDarkMode ? 'hover:bg-white/5' : 'hover:bg-slate-50')}`}
     >
-        <Icon size={20} style={{ color: isActive ? color : (isDarkMode ? '#64748b' : '#94a3b8'), filter: isActive ? `drop-shadow(0 0 8px ${color}60)` : 'none' }} />
+        <Icon size={20} aria-hidden="true" style={{ color: isActive ? color : (isDarkMode ? '#64748b' : '#94a3b8'), filter: isActive ? `drop-shadow(0 0 8px ${color}60)` : 'none' }} />
         {isActive && <div className="absolute -right-1 top-1/2 -translate-y-1/2 w-1 h-6 rounded-full" style={{ backgroundColor: color }} />}
         
         {/* Tooltip */}
