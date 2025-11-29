@@ -11,7 +11,6 @@ interface Props {
 
 const InequalitySimulator: React.FC<Props> = ({ section, isDarkMode, lang }) => {
   const [investment, setInvestment] = useState<number>(30);
-  const sliderId = `investment-slider-${section}`;
   const [hoveredTerm, setHoveredTerm] = useState<string | null>(null);
 
   useEffect(() => {
@@ -181,10 +180,7 @@ const InequalitySimulator: React.FC<Props> = ({ section, isDarkMode, lang }) => 
                 onMouseEnter={() => setHoveredTerm(config.inputDef)}
                 onMouseLeave={() => setHoveredTerm(null)}
               >
-                <label 
-                  htmlFor={sliderId}
-                  className={`text-[10px] font-bold uppercase tracking-widest transition-colors border-b border-dashed ${isDarkMode ? 'text-white/90 hover:text-white border-slate-700 hover:border-white' : 'text-slate-700 hover:text-black border-slate-300 hover:border-black'}`}
-                >
+                <label className={`text-[10px] font-bold uppercase tracking-widest transition-colors border-b border-dashed ${isDarkMode ? 'text-white/90 hover:text-white border-slate-700 hover:border-white' : 'text-slate-700 hover:text-black border-slate-300 hover:border-black'}`}>
                     {config.inputLabel}
                 </label>
                 <HelpCircle size={10} className={theme.textMuted} />
@@ -203,13 +199,12 @@ const InequalitySimulator: React.FC<Props> = ({ section, isDarkMode, lang }) => 
             </div>
          </div>
          
-        <input 
+         <input 
             type="range" 
             min="0" 
             max="100" 
             value={investment} 
             onChange={(e) => setInvestment(parseInt(e.target.value))}
-          id={sliderId}
             className={`w-full h-1.5 rounded-full appearance-none cursor-pointer hover:opacity-90 transition-opacity ${theme.sliderBg}`}
             style={{ accentColor: config.color }}
           />

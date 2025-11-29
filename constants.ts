@@ -20,6 +20,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 48,
       longDescription: "La sociedad se está rompiendo en dos grupos muy separados. Antes, si trabajabas duro, podías mejorar tu vida (ascensor social), pero ahora ese ascensor parece estropeado.",
       keyPoints: ["Ricos más ricos, pobres más pobres.", "Mucha gente con ansiedad por dinero.", "Servicios públicos saturados."],
+      studentOpinion: "En clase de Administración y Finanzas lo vemos claro: los beneficios empresariales suben en los gráficos, pero cuando mis compañeros buscan prácticas, los sueldos que ofrecen apenas dan para pagar una habitación compartida. Es desmotivador estudiar tanto para luego ver que el sistema está trucado.",
       analysis: {
         peopleImpact: "La gente vive estresada y triste porque el dinero no alcanza. Muchos sienten que, por mucho que se esfuercen, no van a tener una casa propia o una vida tranquila.",
         companyImpact: "Las empresas normales venden menos porque la gente no tiene dinero para gastar. Solo les va bien a las marcas de ultra-lujo o a las muy baratas (low-cost).",
@@ -41,9 +42,10 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 15,
       longDescription: "La tecnología avanza muy rápido. Las personas que saben usar las nuevas herramientas digitales tienen ventaja, mientras que las que no, se quedan atrás.",
       keyPoints: ["Trabajos de oficina en peligro.", "Saber usar IA es vital.", "Falta formación para adultos."],
+      studentOpinion: "Como estudiante de Desarrollo de Aplicaciones (DAW), veo que la brecha es real. Si no tienes un buen PC en casa para practicar con IAs o Docker, te quedas atrás respecto al compañero que sí tiene recursos. No es solo saber, es tener las herramientas para aprender.",
       analysis: {
         peopleImpact: "Miedo a perder el trabajo. Los jóvenes que saben de tecnología cobran más, y los mayores o con menos estudios se ven desplazados.",
-        companyImpact: "Las empresas que usan tecnología ganan mucho más dinero con menos esfuerzo. Las pequeñas empresas que no pueden pagarla, cierran.",
+        companyImpact: "Las empresas que usa tecnología ganan mucho más dinero con menos esfuerzo. Las pequeñas empresas que no pueden pagarla, cierran.",
         economicImpact: "Unas pocas empresas tecnológicas gigantes dominan todo el mercado y tienen demasiado poder.",
         measuresTaken: "Cursos gratuitos del paro (SEPE) y ayudas para poner internet en empresas (Kit Digital).",
         measuresNeeded: "Clases de tecnología gratis y obligatorias para trabajadores, pagadas por las empresas que más ganan con la IA."
@@ -54,7 +56,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       title: "Freno Económico",
       detail: "Cuando hay mucha desigualdad, el país funciona peor y se pierde dinero porque no aprovechamos el talento de todos.",
       icon: BarChart3,
-      imageUrl: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=1000",
+      imageUrl: "https://images.unsplash.com/photo-1611974765270-ca1258634369?auto=format&fit=crop&q=80&w=1000",
       category: 'impact',
       sourceLinks: [{ title: "Fondo Monetario Internacional", url: "https://www.imf.org/es/Home" }],
       statValue: "0.8%",
@@ -62,6 +64,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 25,
       longDescription: "Imagina un equipo de fútbol donde solo juegan 2 jugadores y el resto mira. Eso pasa en la economía cuando los pobres no pueden estudiar ni emprendre.",
       keyPoints: ["Menos consumo en tiendas.", "Talento joven desperdiciado.", "Crisis financieras frecuentes."],
+      studentOpinion: "Es matemática simple: si la gente no tiene dinero, no consume. Si no consumen, las empresas donde quiero trabajar no venden. Al final, la desigualdad nos frena a todos, incluso a los que estudiamos para emprender.",
       analysis: {
         peopleImpact: "Si naces pobre, es casi seguro que morirás pobre, tengas talento o no. Eso desanima a la gente a esforzarse.",
         companyImpact: "Tienen menos clientes. Si la mayoría de la gente solo tiene para comer, no compran muebles, ropa o viajes.",
@@ -83,6 +86,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 65,
       longDescription: "No es justo que paguemos todos igual por el cambio climático. Quien más ensucia el planeta, debería pagar más para limpiarlo.",
       keyPoints: ["Quien contamina, paga.", "Dinero para energía solar.", "Castigo al lujo contaminante."],
+      studentOpinion: "En el ciclo de Química Ambiental lo estudiamos: la tecnología para ser verdes existe, pero es cara. Si no gravamos a las grandes petroleras, nunca podremos subvencionar las placas solares para la gente normal. Es cuestión de justicia, no solo de ecología.",
       analysis: {
         peopleImpact: "La gente normal sufre olas de calor y luz cara. Estos impuestos servirían para bajar el precio de la energía y mejorar el transporte público.",
         companyImpact: "Las empresas que cuidan el planeta pagarían menos impuestos. Las sucias tendrían que cambiar o pagar multas.",
@@ -104,6 +108,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 22,
       longDescription: "Es un sueldo base del Estado para todos. Así, nadie tiene miedo a quedarse en la calle y la gente puede arriesgarse a montar negocios o estudiar.",
       keyPoints: ["Fin de la pobreza extrema.", "Menos estrés por dinero.", "Más libertad para elegir trabajo."],
+      studentOpinion: "Muchos compañeros dejan el Grado Superior porque necesitan trabajar ya para ayudar en casa. Con una renta básica, podrían terminar sus estudios, formarse mejor y luego aportar mucho más a la sociedad con trabajos cualificados.",
       analysis: {
         peopleImpact: "Tranquilidad mental. Sabes que, pase lo que pase, tendrás para comer. Puedes rechazar trabajos donde te explotan.",
         companyImpact: "La gente tendría más dinero para comprar. Los jefes tendrían que tratar mejor a los empleados para que no se vayan.",
@@ -127,6 +132,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 20,
       longDescription: "Hoy en día, estudiar sin internet es casi imposible. Los deberes se mandan online. Si un niño no tiene WiFi, se queda atrás.",
       keyPoints: ["Falta de WiFi en casa.", "Padres que no saben informática.", "Desventaja en deberes."],
+      studentOpinion: "En Sistemas Microinformáticos (SMR) nos traen portátiles 'del gobierno' para arreglar que dan pena. Mientras, otros alumnos traen MacBooks de casa. Esa diferencia de hardware marca quién aprende rápido y quién se pasa la clase esperando a que cargue Windows.",
       analysis: {
         peopleImpact: "Frustración en los niños que no pueden seguir el ritmo. Sentimiento de inferioridad.",
         companyImpact: "En el futuro, habrá menos trabajadores preparados para puestos digitales.",
@@ -148,6 +154,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 60,
       longDescription: "La matrícula ha bajado un poco, pero el alquiler de un piso de estudiantes es impagable para una familia obrera.",
       keyPoints: ["Alquileres inasumibles.", "Becas que llegan tarde.", "Trabajar mientras estudias."],
+      studentOpinion: "Yo elegí FP porque no podía permitirme ir a la Uni en otra ciudad. Al final estoy contento porque es práctico, pero es injusto que mi código postal decida mi futuro más que mis notas.",
       analysis: {
         peopleImpact: "Jóvenes agobiados trabajando y estudiando a la vez. Muchos abandonan.",
         companyImpact: "Faltan ingenieros y médicos porque solo estudian los que pueden pagárselo.",
@@ -169,6 +176,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
         statPercentage: 40,
         longDescription: "Los primeros años son vitales para el cerebro. Si un niño va a una buena guardería, aprende mejor luego. Los pobres no pueden pagarla.",
         keyPoints: ["Plazas públicas insuficientes.", "Desarrollo cerebral clave.", "Conciliación familiar imposible."],
+        studentOpinion: "En el ciclo de Educación Infantil vemos la diferencia abismal entre un niño que ha sido estimulado desde bebé y uno que no. Si no hacemos públicas las guarderías, estamos creando desigualdad desde la cuna.",
         analysis: {
           peopleImpact: "Madres que dejan de trabajar para cuidar niños. Niños que entran al cole menos preparados.",
           companyImpact: "Absentismo laboral de los padres por no tener dónde dejar a los hijos.",
@@ -190,6 +198,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
         statPercentage: 30,
         longDescription: "Muchos chicos se aburren en clase o necesitan dinero ya, así que se van a trabajar de camareros o peones, sin formarse más.",
         keyPoints: ["Fracaso escolar alto.", "Empleos precarios.", "Falta de motivación."],
+        studentOpinion: "Tengo amigos que lo dejaron a los 16 para trabajar en la obra o de camareros. Ahora se arrepienten porque ven que sin un título no avanzan, pero volver a estudiar de adulto es muy difícil.",
         analysis: {
           peopleImpact: "Condenados a trabajos mal pagados toda la vida. Mayor riesgo de paro.",
           companyImpact: "Trabajadores con poca formación técnica.",
@@ -211,6 +220,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
         statPercentage: 80,
         longDescription: "Aprender un oficio (electricista, informático, sanitario) tiene casi paro cero. Hay que darle el prestigio que merece.",
         keyPoints: ["Empleo casi seguro.", "Sueldos dignos.", "Falta de plazas en informática."],
+        studentOpinion: "La gente piensa que la FP es para los que 'no valen' para estudiar, y es mentira. En mi grado aprendemos cosas reales que las empresas necesitan ya. Salimos con trabajo, a veces antes que los universitarios.",
         analysis: {
           peopleImpact: "Jóvenes que encuentran su vocación y ganan dinero pronto.",
           companyImpact: "Empresas felices porque encuentran trabajadores que saben hacer cosas prácticas.",
@@ -228,15 +238,16 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       icon: HeartHandshake,
       imageUrl: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1000",
       category: 'impact',
-      sourceLinks: [{ title: "Alto Comisionado Pobreza", url: "https://www.comisionadopobreza.gob.es/" }],
+      sourceLinks: [{ title: "Save the Children", url: "https://www.savethechildren.es/pobreza-infantil-espana" }],
       statValue: "28%",
       statLabel: "Niños en riesgo de pobreza",
       statPercentage: 28,
       longDescription: "No es solo pasar hambre. Es no ir al dentista, no tener gafas si las necesitas, o no ir de excursión con el cole.",
-      keyPoints: ["Mala alimentación.", "Problemas de vista/boca.", "Vergüenza social."],
+      keyPoints: ["Mala alimentación.", "Problemes de vista/boca.", "Vergüenza social."],
+      studentOpinion: "En Integración Social hacemos prácticas en barrios humildes y se te cae el alma a los pies. Niños que no quieren ir al cole porque no tienen material o ropa nueva. Es imposible rendir académicamente así.",
       analysis: {
         peopleImpact: "Niños que crecen con problemas de salud y tristeza. De mayores suelen tener peores trabajos.",
-        companyImpact: "Futuros trabajadores con peor salud.",
+        companyImpact: "Futurs trabajadores con peor salud.",
         economicImpact: "Gasto enorme en sanidad en el futuro para curar problemas que se podían prevenir.",
         measuresTaken: "Ayuda por hijo a cargo y becas comedor.",
         measuresNeeded: "Comedor escolar gratis y universal para asegurar que todo niño come bien al menos una vez al día."
@@ -255,6 +266,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 12,
       longDescription: "Gente que madruga, trabaja 8 horas o más, y aun así tiene que pedir comida en la iglesia o compartir piso con 3 extraños.",
       keyPoints: ["Sueldos precarios.", "Temporalidad.", "Vivir al día."],
+      studentOpinion: "Ves ofertas de trabajo para técnicos superiores a media jornada por 600 euros, pidiendo coche propio. ¿Cómo pretenden que nos independicemos? Al final te sale más a cuenta seguir estudiando que trabajar por miseria.",
       analysis: {
         peopleImpact: "Agotamiento físico y mental. Sensación de que el esfuerzo no vale la pena.",
         companyImpact: "Empleados cansados, desmotivados y que rinden poco.",
@@ -276,6 +288,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 50,
       longDescription: "Pagar un techo es el mayor problema. O pagas el alquiler, o comes. No hay término medio para muchas familias.",
       keyPoints: ["Alquileres abusivos.", "Desahucios.", "Jóvenes sin emanciparse."],
+      studentOpinion: "En mi clase nadie vive solo. Todos vivimos con nuestros padres o compartiendo piso con 4 personas más. Hablamos de irnos al extranjero solo para poder pagar un alquiler digno. Es muy triste.",
       analysis: {
         peopleImpact: "Miedo constante a perder la casa. Jóvenes viviendo con sus padres hasta los 30 años.",
         companyImpact: "Dificultad para mover trabajadores a ciudades caras (como Madrid o Barcelona).",
@@ -297,6 +310,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 15,
       longDescription: "Elegir entre encender la estufa o comprar carne. Esa es la realidad de muchos ancianos y familias.",
       keyPoints: ["Casas mal aisladas.", "Facturas de luz caras.", "Enfermedades respiratorias."],
+      studentOpinion: "Intentar estudiar para un examen final con el abrigo puesto en casa porque no puedes poner la estufa es algo que te marca. Te quita concentración y te hace sentir ciudadano de segunda.",
       analysis: {
         peopleImpact: "Bronquitis, artrosis y malestar general por el frío y la humedad.",
         companyImpact: "Las eléctricas ganan mucho, pero la gente gasta menos en otras cosas.",
@@ -318,6 +332,7 @@ const DATA_ES: Record<string, InfoCardData[]> = {
       statPercentage: 15,
       longDescription: "La inflación ha disparat el precio del aceite, la fruta y la carne. Las dietas pobres causan obesidad.",
       keyPoints: ["Comida basura barata.", "Obesidad infantil.", "Colas del hambre."],
+      studentOpinion: "En el módulo de Dietética lo estudiamos: la obesidad hoy en día es un problema de clase. Comer bollería es barato, comer verdura fresca es caro. Mis compañeros con menos dinero comen peor, no porque quieran, sino porque no pueden elegir.",
       analysis: {
         peopleImpact: "Mala salud, obesidad y diabetes en barrios pobres.",
         companyImpact: "Los supermercados ganan, pero los pequeños agricultores sufren.",
@@ -344,6 +359,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 48,
         longDescription: "Society is breaking into two very separate groups. Before, if you worked hard, you could improve your life (social elevator), but now that elevator seems broken.",
         keyPoints: ["Rich get richer, poor get poorer.", "High financial anxiety.", "Saturated public services."],
+        studentOpinion: "In my Business Administration classes, we see the numbers clearly: profits go up, but when my classmates look for internships, wages barely cover a shared room. It's demotivating to study so hard to see the system is rigged.",
         analysis: {
           peopleImpact: "People live stressed and sad because money isn't enough. Many feel that no matter how hard they try, they won't own a home or have a peaceful life.",
           companyImpact: "Standard businesses sell less because people have no money to spend. Only ultra-luxury or low-cost brands thrive.",
@@ -352,7 +368,6 @@ const DATA_EN: Record<string, InfoCardData[]> = {
           measuresNeeded: "The ultra-wealthy must pay more taxes to improve hospitals and schools for everyone."
         }
       },
-      // ... (Continuing with simplified EN translation for other items)
       {
         id: 's2',
         title: "Digital Divide",
@@ -366,6 +381,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 15,
         longDescription: "Technology moves fast. People who know how to use new digital tools have an advantage, while those who don't are left behind.",
         keyPoints: ["Office jobs at risk.", "AI skills are vital.", "Lack of adult training."],
+        studentOpinion: "As a Web Dev student, I see it daily. If you don't have a powerful PC at home to practice AI or Docker, you lag behind the classmate who does. It's not just about knowing, it's about having the tools to learn.",
         analysis: {
           peopleImpact: "Fear of losing jobs. Tech-savvy youth earn more, while older or less educated workers are displaced.",
           companyImpact: "Tech-using companies earn much more with less effort. Small businesses that can't afford it close down.",
@@ -379,7 +395,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         title: "Economic Brake",
         detail: "When there is high inequality, the country functions worse and money is lost because we don't use everyone's talent.",
         icon: BarChart3,
-        imageUrl: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=1000",
+        imageUrl: "https://images.unsplash.com/photo-1611974765270-ca1258634369?auto=format&fit=crop&q=80&w=1000",
         category: 'impact',
         sourceLinks: [{ title: "IMF", url: "https://www.imf.org/en/Home" }],
         statValue: "0.8%",
@@ -387,6 +403,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 25,
         longDescription: "Imagine a soccer team where only 2 players play and the rest watch. That happens in the economy when the poor can't study or start businesses.",
         keyPoints: ["Less consumption in stores.", "Wasted young talent.", "Frequent financial crises."],
+        studentOpinion: "It's simple math: if people don't have money, they don't consume. If they don't consume, the companies I want to work for don't sell. Inequality slows us all down, even those of us studying to be entrepreneurs.",
         analysis: {
           peopleImpact: "If you're born poor, you'll likely die poor, talent or not. This discourages effort.",
           companyImpact: "Fewer customers. If most people only have enough for food, they don't buy furniture, clothes, or trips.",
@@ -408,6 +425,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 65,
         longDescription: "It's not fair we all pay the same for climate change. Polluters should pay to clean it up.",
         keyPoints: ["Polluter pays.", "Money for solar energy.", "Tax on polluting luxury."],
+        studentOpinion: "We study this in Environmental Chemistry: the tech to be green exists, but it's pricey. If we don't tax big oil, we can never subsidize solar panels for normal people. It's about justice, not just ecology.",
         analysis: {
           peopleImpact: "Normal people suffer heatwaves and expensive energy. These taxes would lower energy prices and improve public transport.",
           companyImpact: "Eco-friendly companies pay less tax. Dirty ones must change or pay fines.",
@@ -429,6 +447,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 22,
         longDescription: "A state base salary for all. No one fears homelessness, and people can take risks to start businesses or study.",
         keyPoints: ["End extreme poverty.", "Less money stress.", "Freedom to choose jobs."],
+        studentOpinion: "Many classmates drop out because they need to work immediately to help at home. With a basic income, they could finish their degree, get better training, and contribute much more to society later.",
         analysis: {
           peopleImpact: "Mental peace. Knowing you'll eat no matter what. You can reject exploitative jobs.",
           companyImpact: "People would have more money to buy. Bosses would treat employees better so they don't leave.",
@@ -452,6 +471,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 20,
         longDescription: "Studying without internet is nearly impossible today. Homework is online. Without WiFi, kids fall behind.",
         keyPoints: ["No home WiFi.", "Parents lack tech skills.", "Homework disadvantage."],
+        studentOpinion: "In IT Support classes, we fix government-issued laptops that are terrible. Meanwhile, other students bring MacBooks from home. That hardware gap defines who learns fast and who waits for Windows to load.",
         analysis: {
           peopleImpact: "Frustration in kids who can't keep up. Feeling inferior.",
           companyImpact: "Fewer prepared workers for digital jobs in the future.",
@@ -473,6 +493,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 60,
         longDescription: "Tuition is lower, but rent for students is unaffordable for working families.",
         keyPoints: ["Unaffordable rent.", "Late scholarships.", "Working while studying."],
+        studentOpinion: "I chose Vocational Training because I couldn't afford University in another city. I'm happy now because it's practical, but it's unfair that my zip code decides my future more than my grades.",
         analysis: {
           peopleImpact: "Stressed youth working and studying. Many drop out.",
           companyImpact: "Shortage of engineers and doctors because only the wealthy study.",
@@ -494,6 +515,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 40,
         longDescription: "Early years are vital for the brain. Good daycare leads to better learning later. The poor can't afford it.",
         keyPoints: ["Not enough public spots.", "Key brain development.", "Family balance impossible."],
+        studentOpinion: "In Early Childhood Education, we see the huge gap between a stimulated baby and one who isn't. If daycares aren't free and public, we are creating inequality right from the cradle.",
         analysis: {
           peopleImpact: "Mothers stop working to care for kids. Kids enter school less prepared.",
           companyImpact: "Parental absenteeism due to childcare issues.",
@@ -515,6 +537,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 30,
         longDescription: "Many kids get bored or need money, so they work as waiters or laborers without further training.",
         keyPoints: ["High school failure.", "Precarious jobs.", "Lack of motivation."],
+        studentOpinion: "I have friends who quit at 16 to wait tables. Now they regret it because they can't advance without a degree, but going back to study as an adult is incredibly hard.",
         analysis: {
           peopleImpact: "Condemned to low-wage jobs for life. Higher unemployment risk.",
           companyImpact: "Workers with little technical training.",
@@ -536,6 +559,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 80,
         longDescription: "Learning a trade (electrician, IT, health) has near-zero unemployment. It needs respect.",
         keyPoints: ["Secure employment.", "Decent wages.", "Lack of IT spots."],
+        studentOpinion: "People think Vocational Training is for those who 'failed', and that's a lie. In my degree, we learn real skills companies need now. We graduate with jobs, often before university students.",
         analysis: {
           peopleImpact: "Youth finding vocation and earning money soon.",
           companyImpact: "Happy companies finding skilled practical workers.",
@@ -553,12 +577,13 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         icon: HeartHandshake,
         imageUrl: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1000",
         category: 'impact',
-        sourceLinks: [{ title: "High Comm. Poverty", url: "https://www.comisionadopobreza.gob.es/" }],
+        sourceLinks: [{ title: "Save the Children", url: "https://www.savethechildren.es/pobreza-infantil-espana" }],
         statValue: "28%",
         statLabel: "Kids at poverty risk",
         statPercentage: 28,
         longDescription: "Not just hunger. It's no dentist, no glasses, no school trips.",
         keyPoints: ["Poor diet.", "Vision/dental issues.", "Social shame."],
+        studentOpinion: "In Social Integration internships, you see heartbreaking things. Kids who don't want to go to school because they lack supplies or new clothes. It's impossible to perform academically like that.",
         analysis: {
           peopleImpact: "Kids grow up with health issues and sadness. Often get worse jobs later.",
           companyImpact: "Future workers with worse health.",
@@ -580,6 +605,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 12,
         longDescription: "People working 8+ hours and still needing food banks or sharing flats with strangers.",
         keyPoints: ["Precarious wages.", "Temporary jobs.", "Living day to day."],
+        studentOpinion: "You see job offers for senior technicians for 600 euros part-time, requiring a car. How do they expect us to be independent? In the end, it pays more to keep studying than to work for misery.",
         analysis: {
           peopleImpact: "Physical/mental exhaustion. Feeling effort is useless.",
           companyImpact: "Tired, unmotivated employees performing poorly.",
@@ -601,6 +627,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 50,
         longDescription: "Paying for a roof is the biggest problem. Pay rent or eat. No middle ground.",
         keyPoints: ["Abusive rents.", "Evictions.", "Youth can't move out."],
+        studentOpinion: "Nobody in my class lives alone. We all live with parents or share flats with 4 strangers. We talk about moving abroad just to afford rent. It's really sad.",
         analysis: {
           peopleImpact: "Constant fear of losing home. Youth living with parents until 30.",
           companyImpact: "Hard to move workers to expensive cities.",
@@ -622,6 +649,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 15,
         longDescription: "Choosing between heat or meat. Reality for many elderly and families.",
         keyPoints: ["Poorly insulated homes.", "Expensive bills.", "Respiratory illness."],
+        studentOpinion: "Trying to study for a final exam wearing a coat at home because you can't turn on the heater leaves a mark. It kills your concentration and makes you feel like a second-class citizen.",
         analysis: {
           peopleImpact: "Bronchitis, arthritis, discomfort from cold/damp.",
           companyImpact: "Electric companies profit, people spend less elsewhere.",
@@ -643,6 +671,7 @@ const DATA_EN: Record<string, InfoCardData[]> = {
         statPercentage: 15,
         longDescription: "Inflation spiked oil, fruit, meat prices. Poor diets cause obesity.",
         keyPoints: ["Cheap junk food.", "Child obesity.", "Hunger queues."],
+        studentOpinion: "We study this in Dietetics: obesity today is a class issue. Pastries are cheap, fresh veggies are expensive. My poorer classmates eat worse, not by choice, but because they can't afford better.",
         analysis: {
           peopleImpact: "Poor health, obesity, diabetes in poor areas.",
           companyImpact: "Supermarkets profit, small farmers suffer.",
@@ -669,6 +698,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 48,
         longDescription: "La societat s'està trencant en dos grups. Abans, si treballaves dur, podies millorar la teva vida (ascensor social), però ara sembla espatllat.",
         keyPoints: ["Rics més rics, pobres més pobres.", "Ansietat financera.", "Serveis públics saturats."],
+        studentOpinion: "A classe d'Administració i Finances ho veiem clar: els beneficis pugen, però quan busquem pràctiques, els sous només donen per una habitació compartida. Desmotiva estudiar tant per veure que el sistema està trucat.",
         analysis: {
           peopleImpact: "La gent viu estressada i trista perquè els diners no arriben. Molts senten que no tindran mai casa pròpia.",
           companyImpact: "Les empreses normals venen menys perquè la gent no té diners. Només va bé al luxe o al low-cost.",
@@ -690,6 +720,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 15,
         longDescription: "La tecnologia avança ràpid. Qui sap usar les noves eines digitals té avantatge, la resta es queda enrere.",
         keyPoints: ["Feines d'oficina en perill.", "Saber IA és vital.", "Falta formació adults."],
+        studentOpinion: "Com a estudiant de DAW, veig que la bretxa és real. Si no tens un bon PC a casa per practicar IAs o Docker, et quedes enrere respecte al company que sí té recursos. No és només saber, és tenir les eines.",
         analysis: {
           peopleImpact: "Por a perdre la feina. Els joves tecnològics cobren més, els grans es veuen desplaçats.",
           companyImpact: "Les empreses tecnològiques guanyen molt més amb menys esforç. Les petites tanquen.",
@@ -703,7 +734,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         title: "Fre Econòmic",
         detail: "Amb molta desigualtat, el país funciona pitjor i es perden diners perquè no aprofitem el talent de tots.",
         icon: BarChart3,
-        imageUrl: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=1000",
+        imageUrl: "https://images.unsplash.com/photo-1611974765270-ca1258634369?auto=format&fit=crop&q=80&w=1000",
         category: 'impact',
         sourceLinks: [{ title: "Fons Monetari Internacional", url: "https://www.imf.org/es/Home" }],
         statValue: "0.8%",
@@ -711,6 +742,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 25,
         longDescription: "Imagina un equip de futbol on només juguen 2 i la resta mira. Això passa quan els pobres no poden estudiar ni emprendre.",
         keyPoints: ["Menys consum a botigues.", "Talent jove desaprofitat.", "Crisis freqüents."],
+        studentOpinion: "És matemàtica simple: si la gent no té diners, no consumeix. Si no consumeix, les empreses on vull treballar no venen. La desigualtat ens frena a tots, fins i tot als que volem emprendre.",
         analysis: {
           peopleImpact: "Si neixes pobre, segurament moriràs pobre, tinguis talent o no. Això desanima.",
           companyImpact: "Tenen menys clients. Si la gent només té per menjar, no compren mobles o viatges.",
@@ -722,7 +754,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
       {
         id: 's4',
         title: "Impostos Verds",
-        detail: "La idea és cobrar més a qui contamina molt (jets privats, grans fàbriques) per pagar coses ecològiques.",
+        detail: "La idea és cobrar més a qui contamina molt (jets privados, grans fàbriques) per pagar coses ecològiques.",
         icon: Globe,
         imageUrl: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1000",
         category: 'measure',
@@ -732,6 +764,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 65,
         longDescription: "No és just pagar tots igual pel canvi climàtic. Qui més embruta, hauria de pagar més per netejar.",
         keyPoints: ["Qui contamina, paga.", "Diners per energia solar.", "Càstig al luxe contaminant."],
+        studentOpinion: "A Química Ambiental ho estudiem: la tecnologia verda existeix, però és cara. Si no gravem les petrolieres, mai podrem subvencionar plaques solars per a la gent normal. És justícia, no només ecologia.",
         analysis: {
           peopleImpact: "La gent pateix calor i llum cara. Aquests impostos baixarien el preu de l'energia i millorarien el transport.",
           companyImpact: "Les empreses netes pagarien menys. Les brutes haurien de canviar o pagar multes.",
@@ -753,6 +786,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 22,
         longDescription: "Un sou base de l'Estat per a tots. Així ningú té por de quedar al carrer i la gent pot arriscar-se.",
         keyPoints: ["Fi pobresa extrema.", "Menys estrès.", "Més llibertat laboral."],
+        studentOpinion: "Molts companys deixen el Grau Superior perquè necessiten treballar ja per ajudar a casa. Amb una renda bàsica, podrien acabar els estudis i aportar molt més a la societat amb feines qualificades.",
         analysis: {
           peopleImpact: "Tranquil·litat mental. Saps que menjaràs. Pots rebutjar feines on t'exploten.",
           companyImpact: "La gent tindria més diners per comprar. Els caps tractarien millor els empleats.",
@@ -776,6 +810,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 20,
         longDescription: "Estudiar sense internet és impossible avui. Els deures són online. Sense WiFi, et quedes enrere.",
         keyPoints: ["Sense WiFi a casa.", "Pares sense saber informàtica.", "Desavantatge deures."],
+        studentOpinion: "A Sistemes Microinformàtics (SMR) arreglem portàtils 'del govern' que fan pena. Mentrestant, altres alumnes porten MacBooks de casa. Aquesta diferència marca qui aprèn ràpid i qui espera a que carregui Windows.",
         analysis: {
           peopleImpact: "Frustració en nens que no poden seguir el ritme. Sentiment d'inferioritat.",
           companyImpact: "Menys treballadors preparats per a llocs digitals en el futur.",
@@ -797,6 +832,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 60,
         longDescription: "La matrícula ha baixat, però el lloguer és impagable per a una família obrera.",
         keyPoints: ["Lloguers inassumibles.", "Beques arriben tard.", "Treballar mentre estudies."],
+        studentOpinion: "Vaig triar FP perquè no em podia permetre anar a la Uni en una altra ciutat. Estic content perquè és pràctic, però és injust que el meu codi postal decideixi el meu futur més que les meves notes.",
         analysis: {
           peopleImpact: "Joves ofegats treballant i estudiant. Molts abandonen.",
           companyImpact: "Falten enginyers i metges perquè només estudien els que poden pagar-ho.",
@@ -818,6 +854,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 40,
         longDescription: "Els primers anys són vitals pel cervell. Una bona llar d'infants ajuda a aprendre millor. Els pobres no poden pagar-la.",
         keyPoints: ["Places públiques insuficients.", "Desenvolupament clau.", "Conciliació impossible."],
+        studentOpinion: "A Educació Infantil veiem la diferència abismal entre un nen estimulat i un que no. Si les llars d'infants no són públiques, estem creant desigualtat des del bressol.",
         analysis: {
           peopleImpact: "Mares deixen de treballar per cuidar nens. Nens entren a l'escola menys preparats.",
           companyImpact: "Absentisme laboral de pares per no tenir on deixar fills.",
@@ -839,6 +876,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 30,
         longDescription: "Molts nois s'avorreixen o necessiten diners ja, i van a treballar de cambrers o peons.",
         keyPoints: ["Fracàs escolar alt.", "Feines precàries.", "Falta motivació."],
+        studentOpinion: "Tinc amics que ho van deixar als 16 per treballar a l'obra. Ara se'n penedeixen perquè veuen que sense títol no avancen, pero tornar a estudiar d'adult és molt difícil.",
         analysis: {
           peopleImpact: "Condemnats a feines mal pagades tota la vida. Risc d'atur.",
           companyImpact: "Treballadors amb poca formació tècnica.",
@@ -860,6 +898,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 80,
         longDescription: "Aprendre un ofici (electricista, informàtic, sanitari) té atur gairebé zero. Cal donar-li prestigi.",
         keyPoints: ["Feina segura.", "Sous dignes.", "Falta places informàtica."],
+        studentOpinion: "La gent pensa que la FP és per als que 'no valen', i és mentida. Al meu grau aprenem coses reals que les empreses necessiten. Sortim amb feina, a vegades abans que els universitaris.",
         analysis: {
           peopleImpact: "Joves que troben vocació i guanyen diners aviat.",
           companyImpact: "Empreses felices perquè troben treballadors pràctics.",
@@ -877,12 +916,13 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         icon: HeartHandshake,
         imageUrl: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1000",
         category: 'impact',
-        sourceLinks: [{ title: "Alt Comissionat Pobresa", url: "https://www.comisionadopobreza.gob.es/" }],
+        sourceLinks: [{ title: "Save the Children", url: "https://www.savethechildren.es/pobreza-infantil-espana" }],
         statValue: "28%",
         statLabel: "Nens risc pobresa",
         statPercentage: 28,
         longDescription: "No és només gana. És no anar al dentista, no tenir ulleres, o no anar d'excursió.",
         keyPoints: ["Mala alimentació.", "Problemes vista/boca.", "Vergonya social."],
+        studentOpinion: "A Integració Social fem pràctiques a barris humils i se't cau l'ànima als peus. Nens que no volen anar a l'escola perquè no tenen material o roba. És impossible rendir acadèmicament així.",
         analysis: {
           peopleImpact: "Nens que creixen amb problemes de salut i tristor. De grans solen tenir pitjors feines.",
           companyImpact: "Futurs treballadors amb pitjor salut.",
@@ -904,6 +944,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 12,
         longDescription: "Gent que treballa 8 hores i ha de demanar menjar o compartir pis amb 3 desconeguts.",
         keyPoints: ["Sous precaris.", "Temporalitat.", "Viure al dia."],
+        studentOpinion: "Veus ofertes per a tècnics superiors a mitja jornada per 600 euros, demanant cotxe propi. Com pretenen que ens independitzem? Surt més a compte seguir estudiant que treballar per misèria.",
         analysis: {
           peopleImpact: "Esgotament físic i mental. Sensació que l'esforç no val la pena.",
           companyImpact: "Empleats cansats, desmotivats i que rendeixen poc.",
@@ -925,6 +966,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 50,
         longDescription: "Pagar un sostre és el gran problema. O pagues o menges.",
         keyPoints: ["Lloguers abusius.", "Desnonaments.", "Joves sense marxar de casa."],
+        studentOpinion: "A la meva classe ningú viu sol. Tots vivim amb els pares o compartint pis amb 4 persones més. Parlem de marxar a l'estranger només per poder pagar un lloguer digne. És molt trist.",
         analysis: {
           peopleImpact: "Por a perdre la casa. Joves vivint amb pares fins als 30 anys.",
           companyImpact: "Dificultat per moure treballadors a ciutats cares.",
@@ -942,10 +984,11 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         category: 'impact',
         sourceLinks: [{ title: "Creu Roja Energia", url: "https://www2.cruzroja.es/" }],
         statValue: "4.5M",
-        statLabel: "Persones amb fred",
+        statLabel: "Personas amb fred",
         statPercentage: 15,
         longDescription: "Triar entre estufa o carn. Realitat de molts avis i famílies.",
         keyPoints: ["Cases mal aïllades.", "Llum cara.", "Malalties respiratòries."],
+        studentOpinion: "Intentar estudiar amb l'abric posat a casa perquè no pots posar l'estufa és dur. Et treu concentració i et fa sentir ciutadà de segona categoria.",
         analysis: {
           peopleImpact: "Bronquitis, artrosi i malestar pel fred i humitat.",
           companyImpact: "Les elèctriques guanyen, la gent gasta menys en altres coses.",
@@ -967,6 +1010,7 @@ const DATA_CA: Record<string, InfoCardData[]> = {
         statPercentage: 15,
         longDescription: "La inflació ha disparat oli, fruita i carn. Les dietes pobres causen obesitat.",
         keyPoints: ["Menjar escombraries barat.", "Obesitat infantil.", "Cues de la gana."],
+        studentOpinion: "A Dietètica ho estudiem: l'obesitat avui és un problema de classe. La brioixeria és barata, la verdura fresca cara. Els meus companys amb menys diners mengen pitjor perquè no poden triar.",
         analysis: {
           peopleImpact: "Mala salut, obesitat i diabetis en barris pobres.",
           companyImpact: "Els supermercats guanyen, els pagesos pateixen.",
@@ -1001,7 +1045,8 @@ export const UI_TEXT = {
     needed: "Debería hacerse",
     socialShort: "Social",
     eduShort: "Edu",
-    povertyShort: "Pobreza"
+    povertyShort: "Pobreza",
+    studentView: "Opinión Alumno FP"
   },
   en: {
     reportTitle: "2025 Report",
@@ -1023,7 +1068,8 @@ export const UI_TEXT = {
     needed: "What should be done",
     socialShort: "Social",
     eduShort: "Edu",
-    povertyShort: "Poverty"
+    povertyShort: "Poverty",
+    studentView: "Vocational Student View"
   },
   ca: {
     reportTitle: "Informe 2025",
@@ -1045,7 +1091,8 @@ export const UI_TEXT = {
     needed: "S'hauria de fer",
     socialShort: "Social",
     eduShort: "Edu",
-    povertyShort: "Pobresa"
+    povertyShort: "Pobresa",
+    studentView: "Opinió Alumne FP"
   }
 };
 
